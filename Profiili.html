@@ -179,9 +179,11 @@
         window.OpintoAikaSettings.refreshProfilePhoto();
         photoStatus.textContent = 'Profiilikuva poistettu.';
       });
-      document.getElementById('logout-link').addEventListener('click', () => {
-  localStorage.removeItem('opintoaikaSession');
-  window.location.href = '../Kirjaudu.html';
+      document.getElementById('logout-link').addEventListener('click', function(event) {
+    event.preventDefault();
+
+    localStorage.removeItem('opintoaikaSession');
+    window.location.href = '../Kirjaudu.htm
       });
     })();
   </script>
