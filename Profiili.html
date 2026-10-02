@@ -180,7 +180,9 @@
         photoStatus.textContent = 'Profiilikuva poistettu.';
       });
       document.getElementById('logout-link').addEventListener('click', () => {
-        localStorage.removeItem('opintoaikaSession');
+  localStorage.removeItem('opintoaikaSession');
+  window.location.href = 'Kirjaudu.html';
+});
       });
     })();
   </script>
