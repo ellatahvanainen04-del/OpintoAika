@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpintoAika - Kirjaudu sisään</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800&family=Arimo:wght@400;600;700&family=Material+Symbols+Outlined">
+  <script src="../tailwind.min.js"></script>
+  <style>
+    :root {
+      --pink: #FAD6F0;
+      --blue: #B9CEEA;
+      --bg: #fafafa;
+    }
+
+    body {
+      background: var(--bg);
+      color: #111827;
+      font-family: Arimo, sans-serif;
+    }
+
+    button, input {
+      font: inherit;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(250, 214, 240, .4);
+    }
+
+    .input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 0;
+      border-radius: 12px;
+      outline: none;
+      box-shadow: inset 0 0 0 1.5px var(--pink);
+    }
+
+    .input:focus {
+      box-shadow: inset 0 0 0 2px var(--blue), 0 0 0 3px rgba(185, 206, 234, .3);
+    }
+
+    .btn {
+      border-radius: 999px;
+      padding: 12px;
+      font-weight: 700;
+      transition: filter .2s;
+    }
+
+    .btn:hover {
+      filter: brightness(1.05);
+    }
+
+    .auth-status {
+      min-height: 20px;
+      margin: 0;
+      color: #8b2730;
+      font-size: 13px;
+    }
+
+    .auth-switch {
+      margin: 16px 0 0;
+      color: #4b5563;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .auth-switch button {
+      padding: 0;
+      border: 0;
+      color: #506c62;
+      background: transparent;
+      font-weight: 700;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .auth-note {
+      color: #657370;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+  </style>
+  <link rel="stylesheet" href="../app-theme.css" data-app-theme>
+  <script src="../app-theme.js"></script>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+  <main class="w-full max-w-md">
+    <header class="text-center mb-6">
+      <img src="Opintoaika.img.png" alt="OpintoAika" class="w-24 h-24 mx-auto rounded-2xl bg-white p-2 shadow mb-4">
+      <h1 class="text-4xl font-extrabold text-[#B9CEEA] font-['Epilogue']">OpintoAika</h1>
+      <h2 id="auth-heading" class="text-xl font-bold mt-2">Kirjaudu sisään</h2>
+      <p class="text-gray-600 mt-2">Tasapainota työ, opinnot ja vapaa-aika helposti yhdessä näkymässä.</p>
+    </header>
+
+    <section class="card p-5">
+      <form id="login-form" class="space-y-4">
+        <div>
+          <label for="username" class="font-bold block mb-1">Sähköposti tai opiskelijatunnus</label>
+          <input id="username" class="input" type="text" autocomplete="username" placeholder="esim. opiskelija@yliopisto.fi">
+        </div>
+
+        <div>
+          <label for="password" class="font-bold block mb-1">Salasana</label>
+          <input id="password" class="input" type="password" autocomplete="current-password" placeholder="********">
+        </div>
+
+        <label class="flex items-center gap-2 text-sm">
+          <input type="checkbox" checked>
+          Muista minut
+        </label>
+
+        <button class="btn w-full bg-[var(--blue)]" type="submit">Kirjaudu sisään</button>
+        <p id="login-status" class="auth-status" aria-live="polite"></p>
+      </form>
+
+      <form id="register-form" class="space-y-4" hidden>
+        <div>
+          <label for="register-name" class="font-bold block mb-1">Nimi</label>
+          <input id="register-name" class="input" type="text" autocomplete="name" required>
+        </div>
+
+        <div>
+          <label for="register-identifier" class="font-bold block mb-1">Sähköposti tai opiskelijatunnus</label>
+          <input id="register-identifier" class="input" type="text" autocomplete="username" required>
+        </div>
+
+        <div>
+          <label for="register-password" class="font-bold block mb-1">Salasana</label>
+          <input id="register-password" class="input" type="password" autocomplete="new-password" minlength="8" required>
+        </div>
+
+        <div>
+          <label for="register-confirm-password" class="font-bold block mb-1">Vahvista salasana</label>
+          <input id="register-confirm-password" class="input" type="password" autocomplete="new-password" minlength="8" required>
+        </div>
+
+        <p class="auth-note">Tili tallennetaan vain tähän selaimeen. Käytä vähintään 8 merkin salasanaa.</p>
+        <button class="btn w-full bg-[var(--blue)]" type="submit">Luo käyttäjätili</button>
+        <p id="register-status" class="auth-status" aria-live="polite"></p>
+      </form>
+
+      <p class="auth-switch">
+        <span id="auth-switch-prompt">Eikö sinulla ole tiliä?</span>
+        <button id="auth-switch-button" type="button" aria-controls="register-form" aria-expanded="false">Luo käyttäjätili</button>
+      </p>
+    </section>
+  </main>
+
+  <script>
+    (() => {
+      const accountKey = 'opintoaikaAccount';
+      const sessionKey = 'opintoaikaSession';
+      const loginForm = document.getElementById('login-form');
+      const registerForm = document.getElementById('register-form');
+      const authHeading = document.getElementById('auth-heading');
+      const switchPrompt = document.getElementById('auth-switch-prompt');
+      const switchButton = document.getElementById('auth-switch-button');
+
+      const normalizeIdentifier = (value) => value.trim().toLocaleLowerCase('fi-FI');
+      const bytesToBase64 = (bytes) => btoa(Array.from(bytes, (byte) => String.fromCharCode(byte)).join(''));
+      const base64ToBytes = (value) => Uint8Array.from(atob(value), (character) => character.charCodeAt(0));
+      const readAccount = () => {
+        try {
+          return JSON.parse(localStorage.getItem(accountKey) || 'null');
+        } catch (error) {
+          return null;
+        }
+      };
+      const derivePasswordHash = async (password, salt) => {
+        const keyMaterial = await crypto.subtle.importKey('raw', new TextEncoder().encode(password), 'PBKDF2', false, ['deriveBits']);
+        const hash = await crypto.subtle.deriveBits({ name: 'PBKDF2', salt, iterations: 180000, hash: 'SHA-256' }, keyMaterial, 256);
+        return new Uint8Array(hash);
+      };
+      const setAuthMode = (registering) => {
+        loginForm.hidden = registering;
+        registerForm.hidden = !registering;
+        authHeading.textContent = registering ? 'Luo käyttäjätili' : 'Kirjaudu sisään';
+        switchPrompt.textContent = registering ? 'Onko sinulla jo tiliä?' : 'Eikö sinulla ole tiliä?';
+        switchButton.textContent = registering ? 'Kirjaudu sisään' : 'Luo käyttäjätili';
+        switchButton.setAttribute('aria-controls', registering ? 'login-form' : 'register-form');
+        switchButton.setAttribute('aria-expanded', String(registering));
+      };
+
+      switchButton.addEventListener('click', () => setAuthMode(registerForm.hidden));
+
+      registerForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const status = document.getElementById('register-status');
+        const name = document.getElementById('register-name').value.trim();
+        const identifier = normalizeIdentifier(document.getElementById('register-identifier').value);
+        const password = document.getElementById('register-password').value;
+        const confirmPassword = document.getElementById('register-confirm-password').value;
+        if (password.length < 8) {
+          status.textContent = 'Salasanassa pitää olla vähintään 8 merkkiä.';
+          return;
+        }
+        if (password !== confirmPassword) {
+          status.textContent = 'Salasanat eivät täsmää.';
+          return;
+        }
+        if (readAccount()) {
+          status.textContent = 'Tähän selaimeen on jo luotu tili. Kirjaudu sisään.';
+          return;
+        }
+        try {
+          const salt = crypto.getRandomValues(new Uint8Array(16));
+          const passwordHash = await derivePasswordHash(password, salt);
+          const account = { name, identifier, salt: bytesToBase64(salt), passwordHash: bytesToBase64(passwordHash) };
+          localStorage.setItem(accountKey, JSON.stringify(account));
+          localStorage.setItem(sessionKey, JSON.stringify({ name, identifier }));
+          const profile = { name, birthDate: '', email: identifier.includes('@') ? identifier : '', phone: '' };
+          localStorage.setItem('opintoaikaProfile', JSON.stringify(profile));
+          window.location.href = new URL('../Viikkosuunnittelu.html', window.location.href).href;
+        } catch (error) {
+          status.textContent = 'Tiliä ei voitu tallentaa tässä selaimessa.';
+        }
+      });
+
+      loginForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const status = document.getElementById('login-status');
+        const identifier = normalizeIdentifier(document.getElementById('username').value);
+        const password = document.getElementById('password').value;
+        const account = readAccount();
+        if (!account) {
+          status.textContent = 'Luo ensin käyttäjätili tässä selaimessa.';
+          return;
+        }
+        if (identifier !== account.identifier) {
+          status.textContent = 'Tarkista sähköposti tai opiskelijatunnus ja salasana.';
+          return;
+        }
+        try {
+          const passwordHash = await derivePasswordHash(password, base64ToBytes(account.salt));
+          if (bytesToBase64(passwordHash) !== account.passwordHash) {
+            status.textContent = 'Tarkista sähköposti tai opiskelijatunnus ja salasana.';
+            return;
+          }
+          localStorage.setItem(sessionKey, JSON.stringify({ name: account.name, identifier: account.identifier }));
+          window.location.href = new URL('../Viikkosuunnittelu.html', window.location.href).href;
+        } catch (error) {
+          status.textContent = 'Sisäänkirjautuminen ei onnistunut tässä selaimessa.';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

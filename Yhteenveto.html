@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html lang="fi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&amp;family=Arimo:ital,wght@0,400..700;1,400..700&amp;family=Epilogue:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="tailwind.min.js"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "background": "#f9f9f9", "primary": "#4d653f", "on-tertiary": "#ffffff", "surface-variant": "#e2e2e2", "inverse-on-surface": "#f1f1f1", "surface-container-low": "#f3f3f3", "on-background": "#1b1b1b", "on-secondary-fixed-variant": "#34485f", "on-primary-container": "#4b633d", "on-primary": "#ffffff", "on-error": "#ffffff", "secondary-container": "#cce1fe", "surface-container-highest": "#e2e2e2", "outline": "#74796e", "surface": "#ffffff", "on-surface-variant": "#44483f", "tertiary-fixed": "#fcd8f2", "error-container": "#ffdad6", "surface-container-high": "#e8e8e8", "surface-bright": "#f9f9f9", "on-tertiary-container": "#6f5469", "on-primary-fixed-variant": "#364d2a", "primary-fixed-dim": "#b3cfa1", "surface-container": "#eeeeee", "outline-variant": "#c4c8bc", "on-secondary-container": "#50647c", "on-secondary": "#ffffff", "on-error-container": "#93000a", "primary-fixed": "#cfebbb", "tertiary": "#71566c", "secondary-fixed": "#d1e4ff", "on-tertiary-fixed": "#291427", "tertiary-container": "#efcbe5", "surface-tint": "#4d653f", "inverse-primary": "#b3cfa1", "on-surface": "#1b1b1b", "inverse-surface": "#303030", "on-secondary-fixed": "#051d32", "tertiary-fixed-dim": "#dfbcd6", "on-tertiary-fixed-variant": "#583f53", "primary-container": "#c2deaf", "secondary-fixed-dim": "#b3c8e4", "surface-dim": "#dadada", "secondary": "#4c6078", "error": "#ba1a1a", "on-primary-fixed": "#0b2003", "surface-container-lowest": "#ffffff" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "margin-tablet": "1.5rem", "space-sm": "0.5rem", "gutter": "0.75rem", "space-lg": "1.25rem", "space-md": "0.875rem", "margin": "1rem", "gutter-tablet": "1rem", "space-xl": "1.75rem", "space-xs": "0.25rem" }, fontFamily: { "body-sm": ["Arimo"], "label-md": ["Arimo"], "headline-md": ["Epilogue"], "headline-sm": ["Epilogue"], "headline-xl-mobile": ["Epilogue"], "label-sm": ["Arimo"], "body-lg": ["Arimo"], "body-md": ["Arimo"], "headline-lg": ["Epilogue"], "label-lg": ["Arimo"], "headline-xl": ["Epilogue"], "adlam": ["ADLaM Display", "sans-serif"] }, fontSize: { "body-sm": ["11px", { "lineHeight": "16px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "700" }], "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "body-md": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-lg": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "18px", "fontWeight": "700" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen flex flex-col antialiased selection:bg-secondary-container selection:text-on-secondary-container"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.03)] pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="OpintoAika logo: a stylized minimalist clock or calendar icon interwoven with an academic graduation cap or open book, using pastel light blue #B9CEEA and pastel green #C2DEAF with dark accents.. Brand logo. - Primary color: #c2deaf
+- Font: epilogue
+- Mode: light
+- Roundness: rounded-full
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WxCoQF5UeDZXHBW-0QYEvlJyk_lHTClkxYLYawdEFqOIobWHmo-trogDRZPwxHotYmYjcqrpUDwj2-M17rXjIUON8JSD2HFRatuEO0zOYeDnF53HxyeUX09hAG8lV6UyejgOxE-1qKs2tcz3WmyPy0Z_1FhfUnMQvZDnjtWtIHfGE9XyXMtOmj2bl184r8wh8-saM6aWnBynB9vXCMrQPSXOn3LIKJJQbGaB6ABEVQGChr2D3O7LANKLA"/><div class="flex flex-col justify-center"><div class="flex items-center gap-space-xs"><span class="font-['ADLaM_Display'] text-body-lg text-on-surface tracking-tight leading-none">OpintoAika</span><span class="px-space-xs py-[2px] rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">Kevät 2025</span></div><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Lukujärjestys</span></div></div><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin pb-space-xl gap-space-lg">
+<!-- Header Title & Week Metadata -->
+<section class="flex flex-col gap-space-xs mt-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]" style="font-variation-settings: 'FILL' 1;">insights</span>
+<span class="font-['ADLaM_Display'] text-body-lg text-secondary tracking-wide">Viikkoyhteenveto</span>
+</div>
+<div class="flex items-center gap-1 bg-primary-container px-space-sm py-1 rounded-full text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">calendar_month</span>
+<span id="summary-week-number">Vko 47</span>
+</div>
+</div>
+<h1 class="font-['ADLaM_Display'] text-headline-lg text-secondary tracking-normal leading-tight" id="summary-week-title">
+      Viikko 47 Yhteenveto
+    </h1>
+<p class="font-body-md text-body-md text-on-surface-variant font-semibold" id="summary-week-dates"></p>
+<p class="font-body-md text-body-md text-on-surface-variant font-normal">Valitse ajanjakso tai kirjaa viikon tunnit alle • Viikon ajankäytön ja palautumisen koonti</p>
+</section>
+<!-- Visual Hero: Time Balance Ring Chart -->
+<section class="bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm relative overflow-hidden flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">donut_large</span>
+<h2 class="font-['ADLaM_Display'] text-headline-sm text-secondary">Ajankäytön tasapaino</h2>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-tertiary-fixed text-on-surface">0 h yhteensä</span>
+</div>
+<!-- Donut Chart and Center Metric -->
+<div class="flex items-center justify-center py-space-xs"><div class="relative w-44 h-44 flex items-center justify-center"><svg class="w-full h-full -rotate-90 transform" viewbox="0 0 160 160"><circle cx="80" cy="80" fill="transparent" r="62" stroke="#e2e2e2" stroke-width="16"></circle><circle cx="80" cy="80" fill="transparent" r="62" stroke="#c2deaf" stroke-dasharray="0 389.5" stroke-dashoffset="0" stroke-width="16"></circle></svg><div class="absolute flex flex-col items-center justify-center text-center px-2"><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Kirjattu yhteensä</span><span class="font-['ADLaM_Display'] text-headline-md text-on-surface leading-tight mt-0.5">-- h</span><span class="font-label-sm text-label-sm text-on-surface-variant">Ei vielä kirjauksia</span></div></div></div>
+<!-- Chart Legend Grid -->
+<div class="grid grid-cols-3 gap-y-space-xs gap-x-2 pt-space-xs bg-surface-container-low p-space-sm rounded-DEFAULT"><div class="flex items-center gap-1.5 min-w-0"><span class="w-2.5 h-2.5 rounded-full bg-secondary shrink-0"></span><span class="font-label-sm text-label-sm text-on-surface truncate">Työ: -- h</span></div><div class="flex items-center gap-1.5 min-w-0"><span class="w-2.5 h-2.5 rounded-full bg-tertiary shrink-0"></span><span class="font-label-sm text-label-sm text-on-surface truncate">Uni: -- h</span></div><div class="flex items-center gap-1.5 min-w-0"><span class="w-2.5 h-2.5 rounded-full bg-primary shrink-0"></span><span class="font-label-sm text-label-sm text-on-surface truncate">Opinnot: -- h</span></div><div class="flex items-center gap-1.5 min-w-0"><span class="w-2.5 h-2.5 rounded-full bg-tertiary-container shrink-0"></span><span class="font-label-sm text-label-sm text-on-surface truncate">Harrastukset: -- h</span></div><div class="flex items-center gap-1.5 min-w-0 col-span-2"><span class="w-2.5 h-2.5 rounded-full bg-surface-dim shrink-0"></span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Muu arki: -- h</span></div></div>
+</section>
+<!-- Key Metrics & Activity Cards -->
+<section class="flex flex-col gap-space-md">
+<h3 class="font-['ADLaM_Display'] text-headline-sm text-secondary">Aktiivisuus ja levot</h3>
+<!-- 1. Ruutu: Kokonaistuntimäärä töistä -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm relative overflow-hidden flex flex-col gap-space-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-secondary text-[22px]">work</span></div><div><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Työvuorot</span><h4 class="font-['ADLaM_Display'] text-headline-sm text-secondary leading-none">Kokonaistunnit</h4></div></div><div class="flex items-center gap-1 bg-surface-container-low px-space-sm py-1 rounded-full"><input class="w-12 bg-transparent text-right font-['ADLaM_Display'] text-headline-sm text-on-surface outline-none" min="0" placeholder="0" step="0.5" type="number"/><span class="font-['ADLaM_Display'] text-headline-sm text-on-surface">h</span></div></div><div class="bg-surface-container-low rounded-DEFAULT p-space-xs px-space-sm mt-1 flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-secondary shrink-0">edit_note</span><input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface outline-none placeholder:text-on-surface-variant/70" placeholder="Kirjaa työvuorojen huomiot tai toteuma tähän..." type="text"/></div></div>
+<!-- 2. Ruutu: Kokonaistuntimäärä opiskeluista -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm relative overflow-hidden flex flex-col gap-space-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-primary text-[22px]">school</span></div><div><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Korkeakoulu</span><h4 class="font-['ADLaM_Display'] text-headline-sm text-secondary leading-none">Opiskeluaika</h4></div></div><div class="flex items-center gap-1 bg-surface-container-low px-space-sm py-1 rounded-full"><input class="w-12 bg-transparent text-right font-['ADLaM_Display'] text-headline-sm text-on-surface outline-none" min="0" placeholder="0" step="0.5" type="number"/><span class="font-['ADLaM_Display'] text-headline-sm text-on-surface">h</span></div></div><div class="bg-surface-container-low rounded-DEFAULT p-space-xs px-space-sm mt-1 flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-primary shrink-0">edit_note</span><input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface outline-none placeholder:text-on-surface-variant/70" placeholder="Kirjaa itsenäinen opiskelu, luennot ja palautukset..." type="text"/></div></div>
+<!-- 3. Ruutu: Kokonaistuntimäärä harrastuksista -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm relative overflow-hidden flex flex-col gap-space-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><div class="w-10 h-10 rounded-full bg-tertiary-container flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-tertiary text-[22px]">sports_kabaddi</span></div><div><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Hyvinvointi</span><h4 class="font-['ADLaM_Display'] text-headline-sm text-secondary leading-none">Harrastukset</h4></div></div><div class="flex items-center gap-1 bg-surface-container-low px-space-sm py-1 rounded-full"><input class="w-12 bg-transparent text-right font-['ADLaM_Display'] text-headline-sm text-on-surface outline-none" min="0" placeholder="0" step="0.5" type="number"/><span class="font-['ADLaM_Display'] text-headline-sm text-on-surface">h</span></div></div><div class="bg-surface-container-low rounded-DEFAULT p-space-xs px-space-sm mt-1 flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">edit_note</span><input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface outline-none placeholder:text-on-surface-variant/70" placeholder="Kirjaa urheilu, harrastustunnit tai vapaa-ajan aktiviteetit..." type="text"/></div></div>
+<!-- 4. Ruutu: Tavoiteltu opiskelumäärä & Edistyminen -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm relative overflow-hidden flex flex-col gap-space-sm"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-secondary text-[22px]">flag</span></div><div><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Viikkotavoite</span><h4 class="font-['ADLaM_Display'] text-headline-sm text-secondary leading-none">Opiskelumäärä</h4></div></div><div class="flex items-center gap-1 text-right"><input class="w-10 bg-surface-container-low px-1.5 py-0.5 rounded-DEFAULT text-right font-['ADLaM_Display'] text-headline-sm text-on-surface outline-none" min="0" placeholder="0" type="number"/><span class="font-['ADLaM_Display'] text-headline-sm text-on-surface">h</span><span class="font-body-sm text-body-sm text-on-surface-variant font-normal"> / </span><input class="w-10 bg-surface-container-low px-1.5 py-0.5 rounded-DEFAULT text-right font-body-sm text-body-sm text-on-surface font-semibold outline-none" min="0" placeholder="20" type="number"/><span class="font-body-sm text-body-sm text-on-surface-variant font-normal">h</span></div></div><div class="flex flex-col gap-1 mt-1"><div class="flex justify-between items-center text-label-sm font-label-sm"><span class="text-on-surface-variant font-semibold">Toteuma</span><span class="text-on-surface-variant font-semibold">-- % valmis</span></div><div class="w-full bg-surface-container-high h-3 rounded-full overflow-hidden p-[2px]"><div class="bg-primary-container h-full rounded-full transition-all duration-500 ease-out" style="width: 0%;"></div></div></div><div class="bg-surface-container-low rounded-DEFAULT p-space-sm flex items-center gap-space-xs mt-1"><span class="material-symbols-outlined text-secondary text-[20px] shrink-0">edit_note</span><input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface outline-none placeholder:text-on-surface-variant/70" placeholder="Kirjaa viikkotavoitteen toteuma ja huomiot..." type="text"/></div></div>
+<!-- 5. Ruutu: Kokonaistuntimäärä nukkumisesta -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm relative overflow-hidden flex flex-col gap-space-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-secondary text-[22px]">bedtime</span></div><div><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Palautuminen</span><h4 class="font-['ADLaM_Display'] text-headline-sm text-secondary leading-none">Nukkumisaika</h4></div></div><div class="flex items-center gap-1 bg-surface-container-low px-space-sm py-1 rounded-full"><input class="w-12 bg-transparent text-right font-['ADLaM_Display'] text-headline-sm text-on-surface outline-none" min="0" placeholder="0" step="0.5" type="number"/><span class="font-['ADLaM_Display'] text-headline-sm text-on-surface">h</span></div></div><div class="bg-surface-container-low rounded-DEFAULT p-space-xs px-space-sm mt-1 flex items-center gap-2"><span class="material-symbols-outlined text-[18px] text-secondary shrink-0">edit_note</span><input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface outline-none placeholder:text-on-surface-variant/70" placeholder="Kirjaa unen laatu, keskiarvotunti tai lepojakso..." type="text"/></div></div>
+</section>
+<!-- Quick Student Reflection Prompt -->
+<section id="weekly-mood" class="bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]">auto_awesome</span>
+</div>
+<div class="flex flex-col">
+<span class="font-['ADLaM_Display'] text-headline-sm text-secondary leading-tight">Viikon fiilis?</span>
+<span id="weekly-mood-status" class="font-body-sm text-body-sm text-on-surface-variant" aria-live="polite">Valitse viikon fiilis</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<button type="button" data-weekly-mood="energinen" aria-label="Energinen" aria-pressed="false" class="w-9 h-9 rounded-full bg-surface-container hover:bg-primary-container flex items-center justify-center text-on-surface active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">mood</span>
+</button>
+<button type="button" data-weekly-mood="tasapainoinen" aria-label="Tasapainoinen" aria-pressed="false" class="w-9 h-9 rounded-full bg-surface-container hover:bg-primary-container flex items-center justify-center text-on-surface active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">sentiment_calm</span>
+</button>
+<button type="button" data-weekly-mood="uupunut" aria-label="Uupunut" aria-pressed="false" class="w-9 h-9 rounded-full bg-surface-container hover:bg-primary-container flex items-center justify-center text-on-surface active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">battery_low</span>
+</button>
+</div>
+</section>
+<script>
+  (function () {
+    const settingsScript = document.createElement('script');
+    settingsScript.src = 'app-theme.js';
+    document.head.append(settingsScript);
+
+    const params = new URLSearchParams(window.location.search);
+    document.querySelectorAll('img[alt^="OpintoAika logo:"]').forEach((image) => {
+      image.alt = 'OpintoAika';
+    });
+
+    const getMonday = (date) => {
+      const monday = new Date(date);
+      monday.setHours(0, 0, 0, 0);
+      monday.setDate(monday.getDate() - ((monday.getDay() + 6) % 7));
+      return monday;
+    };
+    const getMondayFromWeek = (year, week) => {
+      const januaryFourth = new Date(year, 0, 4);
+      januaryFourth.setDate(januaryFourth.getDate() - ((januaryFourth.getDay() + 6) % 7) + (week - 1) * 7);
+      return getMonday(januaryFourth);
+    };
+    const parseWeekStart = (value) => {
+      const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value || '');
+      if (!match) return null;
+      const date = new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3]));
+      if (date.getFullYear() !== Number(match[1]) || date.getMonth() !== Number(match[2]) - 1 || date.getDate() !== Number(match[3])) return null;
+      return getMonday(date);
+    };
+    const legacyWeek = Number(params.get('week'));
+    const currentYear = new Date().getFullYear();
+    const monday = parseWeekStart(params.get('weekStart')) || (legacyWeek >= 1 && legacyWeek <= 53
+      ? getMondayFromWeek(Number(params.get('year')) || currentYear, legacyWeek)
+      : getMonday(new Date()));
+    const getWeekInfo = (date) => {
+      const thursday = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+      thursday.setUTCDate(thursday.getUTCDate() + 4 - (thursday.getUTCDay() || 7));
+      const yearStart = new Date(Date.UTC(thursday.getUTCFullYear(), 0, 1));
+      return { number: Math.ceil((((thursday - yearStart) / 86400000) + 1) / 7), year: thursday.getUTCFullYear() };
+    };
+    const formatDate = (date) => `${date.getDate()}.${date.getMonth() + 1}.`;
+    const formatWeekRange = (start) => {
+      const end = new Date(start);
+      end.setDate(end.getDate() + 6);
+      return start.getFullYear() === end.getFullYear()
+        ? `${formatDate(start)}–${formatDate(end)} ${end.getFullYear()}`
+        : `${formatDate(start)}${start.getFullYear()}–${formatDate(end)}${end.getFullYear()}`;
+    };
+    const formatWeekStart = (date) => `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+    const weekInfo = getWeekInfo(monday);
+    const moodButtons = Array.from(document.querySelectorAll('[data-weekly-mood]'));
+    const moodStatus = document.getElementById('weekly-mood-status');
+    const moodLabels = { energinen: 'Energinen', tasapainoinen: 'Tasapainoinen', uupunut: 'Uupunut' };
+    const moodStorageKey = 'opintoaikaWeeklyMood';
+    const moodWeekKey = formatWeekStart(monday);
+    let weeklyMoods = {};
+    try {
+      weeklyMoods = JSON.parse(localStorage.getItem(moodStorageKey) || '{}');
+    } catch (error) {
+      weeklyMoods = {};
+    }
+    const setMood = (mood, save = false) => {
+      moodButtons.forEach((button) => {
+        const selected = button.dataset.weeklyMood === mood;
+        button.setAttribute('aria-pressed', String(selected));
+        button.classList.toggle('bg-primary-container', selected);
+        button.classList.toggle('bg-surface-container', !selected);
+      });
+      if (moodStatus) moodStatus.textContent = mood ? `${moodLabels[mood]} tallennettu tälle viikolle` : 'Valitse viikon fiilis';
+      if (save) {
+        weeklyMoods[moodWeekKey] = mood;
+        try {
+          localStorage.setItem(moodStorageKey, JSON.stringify(weeklyMoods));
+        } catch (error) {
+          if (moodStatus) moodStatus.textContent = 'Fiiliksen tallennus ei onnistunut';
+        }
+      }
+    };
+    moodButtons.forEach((button) => button.addEventListener('click', () => setMood(button.dataset.weeklyMood, true)));
+    setMood(weeklyMoods[moodWeekKey] || '');
+    document.getElementById('summary-week-number').textContent = `Vko ${weekInfo.number}`;
+    document.getElementById('summary-week-title').textContent = `Viikko ${weekInfo.number} Yhteenveto`;
+    document.getElementById('summary-week-dates').textContent = formatWeekRange(monday);
+    const termBadge = document.querySelector('header span.bg-secondary-container');
+    if (termBadge) {
+      const month = monday.getMonth();
+      const term = month >= 7 ? 'Syksy' : month <= 4 ? 'Kevät' : 'Kesä';
+      termBadge.textContent = `${term} ${monday.getFullYear()}`;
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      const nextMonday = new Date(monday);
+      nextMonday.setDate(nextMonday.getDate() + 7);
+      const nextWeekInfo = getWeekInfo(nextMonday);
+      const nextWeekCaption = document.querySelector('#next-week-caption');
+      if (nextWeekCaption) nextWeekCaption.textContent = `Viikko ${nextWeekInfo.number} · ${formatWeekRange(nextMonday)} luonnos valmiina tarkasteltavaksi`;
+      const nextWeekLink = document.querySelector('#next-week-link');
+      if (nextWeekLink) {
+        const nextUrl = new URL('Viikkosuunnittelu.html', window.location.href);
+        nextUrl.searchParams.set('weekStart', formatWeekStart(nextMonday));
+        if (params.get('data')) nextUrl.searchParams.set('data', params.get('data'));
+        nextWeekLink.href = nextUrl.href;
+      }
+    });
+
+    const escapeHtml = (value) => String(value).replace(/[&<>'"]/g, (character) => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      "'": '&#39;',
+      '"': '&quot;'
+    }[character]));
+
+    let schedule = null;
+    try {
+      const querySchedule = new URLSearchParams(window.location.search).get('data');
+      schedule = JSON.parse(querySchedule || localStorage.getItem('opintoaikaSchedule') || 'null');
+    } catch (error) {
+      schedule = null;
+    }
+
+    if (schedule) {
+      const work = schedule.work || [];
+      const hobbies = schedule.hobbies || [];
+      const projects = schedule.projects || [];
+      const lectures = schedule.lectures || [];
+      const exams = schedule.exams || [];
+      const deadlines = schedule.deadlines || [];
+      const getWorkHours = (entry) => {
+        const [, start, end] = entry.split(' | ');
+        if (!start || !end) return 0;
+        const toMinutes = (time) => {
+          const [hours, minutes] = time.split(':').map(Number);
+          return hours * 60 + minutes;
+        };
+        const duration = toMinutes(end) - toMinutes(start);
+        return duration > 0 ? duration / 60 : 0;
+      };
+      const workHours = work.reduce((total, entry) => total + getWorkHours(entry), 0);
+      const hobbyHours = hobbies.reduce((total, entry) => total + (Number(entry.split(' | ')[2]) || 0), 0);
+      const studyHours = projects.reduce((total, entry) => total + (Number(entry.split(' | ')[2]) || 0), 0);
+      const totalHours = workHours + hobbyHours + studyHours;
+      const formatHours = (hours) => Number.isInteger(hours) ? `${hours}` : hours.toFixed(1);
+      const formatHobby = (entry) => {
+        const [name, day, value] = entry.split(' | ');
+        if (/^\d{2}:\d{2}$/.test(value || '')) return `Harrastus: ${name} (${day}, klo ${value})`;
+        return `Harrastus: ${entry} (${formatHours(Number(value) || 0)} h)`;
+      };
+      const formatProject = (entry) => {
+        const [name, deadline, value] = entry.split(' | ');
+        if (/^\d{2}:\d{2}$/.test(value || '')) return `Kouluprojekti: ${name} (${deadline}, klo ${value})`;
+        return `Kouluprojekti: ${entry} (${formatHours(Number(value) || 0)} h)`;
+      };
+      const replaceText = (oldText, newText) => {
+        const element = Array.from(document.querySelectorAll('span')).find((item) => item.textContent.trim() === oldText);
+        if (element) element.textContent = newText;
+      };
+
+      replaceText('0 h yhteensä', `${formatHours(totalHours)} h yhteensä`);
+      replaceText('Kirjattu yhteensä', 'Viikon merkinnät');
+      replaceText('Työ: -- h', `Työ: ${formatHours(workHours)} h`);
+      replaceText('Opinnot: -- h', `Opinnot: ${formatHours(studyHours)} h`);
+      replaceText('Harrastukset: -- h', `Harrastukset: ${formatHours(hobbyHours)} h`);
+      const centerHours = Array.from(document.querySelectorAll('span')).find((item) => item.textContent.trim() === '-- h');
+      if (centerHours) centerHours.textContent = `${formatHours(totalHours)} h`;
+      const progressCircle = document.querySelector('circle[stroke="#c2deaf"]');
+      if (progressCircle) {
+        const circumference = 389.5;
+        const progress = Math.min(totalHours / 40, 1) * circumference;
+        progressCircle.setAttribute('stroke-dasharray', `${progress} ${circumference}`);
+      }
+
+      const summary = document.createElement('section');
+      summary.className = 'bg-surface-container-lowest rounded-DEFAULT p-space-md shadow-sm flex flex-col gap-space-sm';
+      const items = [
+        ...work.map((entry) => `Työvuoro: ${entry} (${formatHours(getWorkHours(entry))} h)`),
+        ...hobbies.map(formatHobby),
+        ...projects.map(formatProject),
+        ...lectures.map((entry) => `Luento: ${entry}`),
+        ...exams.map((entry) => `Tentti: ${entry}`),
+        ...deadlines.map((entry) => `Palautus: ${entry}`)
+      ];
+      summary.innerHTML = `
+        <h2 class="font-['ADLaM_Display'] text-headline-sm text-secondary">Viikon kokonaisuus</h2>
+        ${items.length ? `<ul class="flex flex-col gap-2">${items.map((item) => `<li class="bg-surface-container-low rounded-DEFAULT px-space-sm py-2 text-body-sm">${escapeHtml(item)}</li>`).join('')}</ul>` : '<p class="text-body-sm text-on-surface-variant">Ei vielä kirjauksia tälle viikolle.</p>'}`;
+      const content = document.querySelector('main > div');
+      const cta = content && content.querySelector('.pt-space-xs.flex.flex-col.items-center');
+      if (content && cta) content.insertBefore(summary, cta);
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      const routeMap = {
+        lukujarjestys: { page: 'Lukujärjestys.html' },
+        'kurssit-ja-tyot': { page: 'Viikkosuunnittelu.html', hash: 'school-studies' },
+        vuorosuunnittelu: { page: 'Viikkosuunnittelu.html', hash: 'work-hours' }
+      };
+      let scheduleForNavigation = schedule;
+      if (!scheduleForNavigation) {
+        try {
+          scheduleForNavigation = JSON.parse(localStorage.getItem('opintoaikaSchedule') || 'null');
+        } catch (error) {
+          scheduleForNavigation = null;
+        }
+      }
+      document.querySelectorAll('nav a[data-path]').forEach((link) => {
+        const route = routeMap[link.dataset.path];
+        if (!route) {
+          link.remove();
+          return;
+        }
+        const url = new URL(route.page, window.location.href);
+        url.searchParams.set('weekStart', formatWeekStart(monday));
+        if (scheduleForNavigation) url.searchParams.set('data', JSON.stringify(scheduleForNavigation));
+        if (route.hash) url.hash = route.hash;
+        link.href = url.href;
+      });
+    }, { once: true });
+  })();
+</script>
+<!-- Forward Navigation CTA -->
+<div class="pt-space-xs flex flex-col items-center">
+<a id="next-week-link" class="w-full h-12 bg-primary-container rounded-full flex items-center justify-center gap-space-xs text-on-surface font-['ADLaM_Display'] text-body-lg shadow-sm hover:brightness-95 active:scale-[0.99] transition-all" href="Viikkosuunnittelu.html?week=48">
+<span>Jatka seuraavaan viikkoon</span>
+<span class="material-symbols-outlined text-primary text-[22px]">arrow_forward</span>
+</a>
+<span id="next-week-caption" class="font-label-sm text-label-sm text-on-surface-variant mt-2">
+      Viikko 48 luonnos valmiina tarkasteltavaksi
+    </span>
+</div>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_20px_rgba(185,206,234,0.3)]" data-active-classes="text-on-primary-container font-bold bg-primary-container/40"><div class="flex justify-around items-center h-20 px-space-sm"><a class="flex flex-col items-center justify-center gap-[2px] min-w-[56px] min-h-[44px] px-space-xs py-1 rounded-full text-on-surface-variant hover:text-on-surface transition-all" data-path="lukujarjestys" href="#"><span class="material-symbols-outlined text-[24px]">calendar_today</span><span class="font-label-sm text-label-sm">Aikataulu</span></a><a class="flex flex-col items-center justify-center gap-[2px] min-w-[56px] min-h-[44px] px-space-xs py-1 rounded-full text-on-surface-variant hover:text-on-surface transition-all" data-path="kurssit-ja-tyot" href="#"><span class="material-symbols-outlined text-[24px]">school</span><span class="font-label-sm text-label-sm">Opinnot</span></a><a class="flex flex-col items-center justify-center gap-[2px] min-w-[56px] min-h-[44px] px-space-xs py-1 rounded-full text-on-surface-variant hover:text-on-surface transition-all" data-path="vuorosuunnittelu" href="#"><span class="material-symbols-outlined text-[24px]">work_history</span><span class="font-label-sm text-label-sm">Työvuorot</span></a><a class="flex flex-col items-center justify-center gap-[2px] min-w-[56px] min-h-[44px] px-space-xs py-1 rounded-full text-on-surface-variant hover:text-on-surface transition-all" data-path="tavoitteet" href="#"><span class="material-symbols-outlined text-[24px]">checklist</span><span class="font-label-sm text-label-sm">Tehtävät</span></a><a class="flex flex-col items-center justify-center gap-[2px] min-w-[56px] min-h-[44px] px-space-xs py-1 rounded-full text-on-surface-variant hover:text-on-surface transition-all" data-path="profiili-ja-asetukset" href="#"><span class="material-symbols-outlined text-[24px]">tune</span><span class="font-label-sm text-label-sm">Asetukset</span></a></div></nav></body></html>
