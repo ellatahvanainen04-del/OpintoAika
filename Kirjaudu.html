@@ -213,7 +213,7 @@
           localStorage.setItem(sessionKey, JSON.stringify({ name, identifier }));
           const profile = { name, birthDate: '', email: identifier.includes('@') ? identifier : '', phone: '' };
           localStorage.setItem('opintoaikaProfile', JSON.stringify(profile));
-          window.location.href = new URL('../Viikkosuunnittelu.html', window.location.href).href;
+          window.location.href = 'Viikkosuunnittelu.html';
         } catch (error) {
           status.textContent = 'Tiliä ei voitu tallentaa tässä selaimessa.';
         }
@@ -240,7 +240,7 @@
             return;
           }
           localStorage.setItem(sessionKey, JSON.stringify({ name: account.name, identifier: account.identifier }));
-          window.location.href = new URL('../Viikkosuunnittelu.html', window.location.href).href;
+          window.location.href = 'Viikkosuunnittelu.html';
         } catch (error) {
           status.textContent = 'Sisäänkirjautuminen ei onnistunut tässä selaimessa.';
         }
